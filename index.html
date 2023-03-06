@@ -1,0 +1,141 @@
+<!-- @author Shaine Poirier -->
+<!-- Date: March 7, 2023 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width = device - width, initial-scale = 1">
+
+    <title>Assignment 2: Let's Order a Pizza</title>
+    <meta name = "description" content = "Webpage that allows user to input various options to order a pizza">
+    <meta name = "robots" content = "noindex, nofollow">
+  <!-- Add fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link our CSS page -->
+  <link rel = "stylesheet" href = "css/style.css">
+</head>
+<body>
+    <header>
+        <!-- create 2 column row containing logo on the left and navigation on the right -->
+        <div> <!-- This is our first column containing the logo -->
+            <a href="index.html"> <!-- clicking the logo would bring it back to the main page -->
+                <img src="./img/pizza_logo.PNG" alt="company logo. Image is a drawn pizza with a banner on top of it saying 'pizza'">
+            </a>
+        </div>
+        <!-- This will be our 2nd column containing nav links that will make our website appear more real -->
+        <nav>
+            <menu>
+                <li><a href="index.html" target="_self">Order Online</a></li>
+                <li><a href="index.html" target="_self">Menu</a></li>
+                <li><a href="index.html" target="_self">Rewards</a></li>
+                <li><a href="index.html" target="_self">Locations</a></li>
+            </menu>
+        </nav>
+    </header>
+<!-- create a masthead or hero image and put it here.-->
+    <section>
+         <h1>Create Your Order</h1>
+    </section>
+<!-- place form stuff here. User will input information -->
+    <section>
+        <form action="./php/somefile-php" method="POST">
+            <!-- # of pizzas -->
+            <div>
+                <h4>Number of pizzas</h4>
+                <input type="radio" id="pone" name="pnumber" value="1">
+                    <label for="pone">1</label>
+                <input type="radio" id="ptwo" name="pnumber" value="2">
+                    <label for="ptwo">2</label>
+                <input type="radio" id="pthree" name="pnumber" value="3">
+                    <label for="pthree">3</label>
+                <input type="radio" id="pfour" name="pnumber" value="4">
+                    <label for="pfour">4</label>
+
+            </div>
+            <!-- pizza size -->
+            <div>
+                <h4>Select your pizza size</h4>
+                <input type="radio" id="Small" name="size" value="Small">
+                    <label for="Small">Small</label>
+                <input type="radio" id="Medium" name="size" value="Medium">
+                    <label for="Medium">Medium</label>
+                <input type="radio" id="Large" name="size" value="Large">
+                    <label for="Large">Large</label>
+            </div>
+            <!-- Type of crust -->
+            <div>
+                <h4>Type of crust</h4>
+                <input type="radio" id="White" name="crust" value="White">
+                    <label for="White">White</label>
+                <input type="radio" id="WholeWheat" name="crust" value="Whole Wheat">
+                    <label for="WholeWheat">Whole Wheat</label>
+                <input type="radio" id="Cauliflower" name="crust" value="Cauliflower">
+                    <label for="Cauliflower">Cauliflower</label>
+            </div>
+            <!-- Sauce -->
+            <div>
+                <h4>Select your sauce</h4>
+                <input type="radio" id="PizzaSauce" name="sauce" value="Pizza Sauce">
+                       <label for="PizzaSauce">Pizza Sauce</label>
+                <input type="radio" id="Marinara" name="sauce" value="Marinara">
+                    <label for="Marinara">Marinara</label>
+                <input type="radio" id="Barbeque" name="sauce" value="Barbeque">
+                    <label for="Barbeque">Barbeque</label>
+                <input type="radio" id="Alfredo" name="sauce" value="Alfredo">
+                    <label for="Alfredo">Alfredo</label>
+            </div>
+            <!-- toppings -->
+            <div>
+                <h4>Select your toppings</h4>
+                <input type="checkbox" id="Pepperoni" name="toppings" value="Pepperoni">
+                    <label for="Pepperoni">Pepperoni</label>
+                <input type="checkbox" id="Sausage" name="toppings" value="Sausage">
+                    <label for="Sausage">Sausage</label>
+                <input type="checkbox" id="Mushroom" name="toppings" value="Mushroom">
+                    <label for="Mushroom">Mushroom</label>
+                <input type="checkbox" id="Pineapple" name="toppings" value="Pineapple">
+                    <label for="Pineapple">Pineapple</label>
+                <input type="checkbox" id="Anchovy" name="toppings" value="Anchovy">
+                    <label for="Anchovy">Anchovy</label>
+            </div>
+            <!-- Delivery info -->
+            <div>
+                <h4>Delivery Information</h4>
+                <input type="text" name="fname" required placeholder="First Name">
+                <input type="text" name="lname" required placeholder="Last Name">
+                <p></p>
+                <input type="text" name="address" required placeholder="Street Address">
+                <input type="text" name="city" required placeholder="City">
+                <input type="text" name="province" required placeholder="Province/Region">
+                <input type="text" name="pcode" maxlength="6" required placeholder="Postal Code">
+                <p></p>
+                <input type="email" required placeholder="Email">
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10" placeholder="Phone Number">
+            </div>
+            <!-- payment info -->
+            <div>
+                <h4>Payment Information</h4>
+                 <input type="text" name="cnumber" required placeholder="Card Number">
+                <p></p>
+                 <input type="text" name="expdate" required placeholder="Expiration Date">
+                 <input type="text" name="scode" required placeholder="Security Code">
+                <p></p>
+                 <input type="text" name="clname" required placeholder="First Name">
+                 <input type="text" name="clname" required placeholder="Last Name">
+                <p></p>
+                <input type="submit" name="sbutton">
+            </div>
+        </form>
+    </section>
+    <!-- General company info goes in footer -->
+    <footer>
+        <h5>Company Information</h5>
+        <p>The Pizza Company</p>
+        <p>232 marinara avenue</p>
+        <p>705-xxx-xxxx</p>
+        <p>ThePizzaCompany@gmail.com</p>
+    </footer>
+</body>
+</html>
